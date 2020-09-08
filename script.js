@@ -2,6 +2,10 @@ const playButtonSelectors = document.querySelectorAll(".fa-play");
 const youtubeVideoSelector = document.querySelector("#youtubeVideo");
 const iframeSelector = document.querySelector("#iframeVideo");
 
+
+
+
+
 playButtonSelectors.forEach((selector) => {
   selector.addEventListener("click", () => {
     iframeSelector.src = selector?.dataset?.link
