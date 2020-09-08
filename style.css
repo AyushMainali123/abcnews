@@ -11,14 +11,20 @@
 
 :root {
   --yellow: #ffc200;
+  --green: #0ce682;
+  --dark-gray: #2b283a;
+  --gray: #c5c2d3;
 }
+
 
 @media (min-width: 1140px) {
   .container {
     max-width: 80vw !important;
     margin: auto !important;
+    padding: 0 !important;
   }
 }
+
 
 html {
   scroll-behavior: smooth;
@@ -283,12 +289,11 @@ body {
 
 /* YOutube Videos */
 
-.youtubeVideo{
-  
+.youtubeVideo {
   display: none;
 }
 
-.youtubeVideo.show{
+.youtubeVideo.show {
   display: block;
   background: rgb(24, 22, 22);
   display: grid;
@@ -303,7 +308,6 @@ iframe {
   height: 450px;
   margin: auto;
 }
-
 
 /* Features Section */
 
@@ -379,6 +383,7 @@ iframe {
 
   padding-top: 50px;
   padding-left: 50px;
+  padding-bottom: 25px;
 }
 
 .pricing ul {
@@ -439,9 +444,214 @@ iframe {
   }
 }
 
+/* Programs */
 
-/* TV Shows */
-.tvshows__bottom {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+.programs {
+  background: rgb(24, 22, 22);
+  padding: 20px 0;
+  width: 100vw;
 }
+
+.programs__top {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 0;
+}
+
+.programs__top span {
+  font-size: 24px;
+  text-decoration: underline;
+  text-decoration-color: var(--green);
+}
+
+.programs__top .programs__search {
+  background: white;
+  height: 45px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.programs__top .programs__search i {
+  color: black;
+  margin: 0 10px;
+}
+.programs__top .programs__search input {
+  outline: none;
+  border: none;
+  padding-right: 10px;
+}
+
+.programs__bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
+
+.programs__bottom .program {
+  border-radius: 5px;
+  height: 400px;
+  background: url("https://image.tmdb.org/t/p/original//56v2KjBlU4XaOv9rVYEQypROD7P.jpg");
+  background-color: rgba(0, 0, 0, 0.637);
+  background-blend-mode: multiply;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.programs__bottom .program .poster__content {
+  color: white;
+  padding: 40px 30px;
+
+}
+.programs__bottom .program .title {
+    transition: .45s;
+}
+
+.programs__bottom .program:hover .title{
+  color: var(--green);
+}
+
+.programs__bottom .poster__content p {
+  margin: 45px 0;
+  max-width: 400px;
+}
+
+.programs__bottom .poster__content .play-link {
+  color: var(--green);
+  display: inline-block;
+  margin: 10px 0;
+}
+
+/* Footer */
+
+.footer {
+  background: var(--dark-gray);
+  width: 100vw;
+  padding: 30px 0 0;
+  margin: 50px 0 0;
+  color: white;
+}
+
+
+
+.footer__top li {
+  list-style-type: none;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer__top {
+  padding: 100px 0;
+}
+
+.footer__top h2 {
+  margin-bottom: 10px;
+  font-size: 25px;
+}
+
+.footer__top div:first-child a {
+  color: skyblue;
+    transition: .35s;
+}
+
+.footer__top div:first-child a:hover {
+  color: var(--yellow);
+}
+
+.footer__top li a{
+  font-weight: 550;
+  color: var(--gray);
+  display: inline-block;
+  margin: 8px 0;
+  transition: .35s;
+  font-weight: 700;
+
+}
+
+.footer__top li a:hover {
+  color: skyblue;
+  transform: translateX(7px);
+}
+
+.footer__top form {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__top form input {
+  padding: 10px;
+  padding-left: 18px;
+  border-radius: 10px;
+  max-width: 250px;
+  height: 60px;
+  outline: none;
+  border: none;
+  color: var(--dark-gray);
+}
+
+.footer__top input::placeholder {
+  color: orange;
+}
+
+.footer__top button {
+  margin-top: 15px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+  background: orange;
+  color: white;
+  font-weight: 780;
+  transition: .35s;
+   border: none;
+}
+
+.footer__top button:hover {
+  background: orangered;
+} 
+
+.footer__bottom {
+  background: #252232;
+  padding: 35px 0;
+  display: flex;
+  align-items: center;
+}
+
+.footer__bottom .row > div:nth-child(2) i{
+  color: red;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.footer__bottom .social__links {
+  display: flex;
+}
+
+.footer__bottom .social__links>div:not(:last-child) {
+  margin-right: 15px;
+}
+
+.footer__bottom .social__links > div {
+  height: 45px;
+  width: 45px;
+  background: white;
+  color: var(--dark-gray);
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 1px solid white;
+  transition: .35s;
+}
+
+.footer__bottom .social__links > div:hover {
+  background: orange;
+  color: white;
+  transform: rotate(360deg);
+}
+
+
