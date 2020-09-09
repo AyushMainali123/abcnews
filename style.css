@@ -32,7 +32,7 @@ html {
 body {
   overflow-x: hidden;
   font-family: "Oswald", sans-serif;
-  background: linear-gradient(rgb(43, 4, 43), black);
+  background: linear-gradient(rgb(54, 7, 19), black);
   background-attachment: fixed;
   color: white;
 }
@@ -651,7 +651,7 @@ iframe {
 }
 .television__content > div {
   cursor: pointer;
-  background: rgb(29, 29, 29);
+  background: rgb(32, 1, 1);
 }
 
 .television .swiper-container1 {
